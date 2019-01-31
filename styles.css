@@ -1,0 +1,42 @@
+/* Basic gride */
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 40px 100px 40px:
+}
+
+.header {
+  grid-column: span 12;
+  background-color: blue;
+}
+
+.menu {
+  grid-column: span 6;
+  background-color: yellow;
+}
+
+.content {
+  grid-column: span 6;
+  background-color: red;
+}
+
+.footer {
+  grid-column: span 12;
+  background-color: green;
+}
+
+/* Responsive implementation */
+@media screen and (max-width: 680px) {
+  .header {
+    grid-column: span 6;
+  }
+
+  .menu {
+    grid-row: 1;
+    grid-column: span 6;
+  }
+
+  .content {
+    grid-column: span 12;
+  }
+}
